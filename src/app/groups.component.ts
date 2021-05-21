@@ -41,4 +41,7 @@ export class GroupsComponent implements OnInit {
     // tslint:disable-next-line:max-line-length
     this.groupService.addGroup(this.groupName.nativeElement.value, this.user.nativeElement.value, this.id1.nativeElement.value, this.id2.nativeElement.value, this.id3.nativeElement.value, this.id4.nativeElement.value).subscribe();
   }
+  removeGroup(name: string): void {
+    this.groupService.removeGroup(name).subscribe();
+}
 }

@@ -36,5 +36,13 @@ export class GroupService {
     const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
     return this.http.post(this.addUrl, body.toString(), { headers, observe: 'response' });
   }
+  removeGroup(name: string) {
+    const body = new HttpParams()
+      .set('name', name);
+    const headers = new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' });
+    return this.http.post(this.deleteUrl, body.toString(), { headers, observe: 'response' });
+  }
+
+
 }
 
