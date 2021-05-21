@@ -1,0 +1,59 @@
+<h2>My Groups</h2>
+<ul class="groups">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Remove</th>
+
+    </tr>
+
+  <tr *ngFor="let group of groups">
+    <td>{{group.name}}</td>
+    <td>{{group.usersAmount}}</td>
+    <button>Delete</button>
+  </tr>
+    </table>
+
+
+  <h3>Add Group</h3>
+
+  <div>
+    <div  >
+      <label>GroupName:</label>
+      <input #groupName name="name" size="30" type="text" />
+    </div>
+
+    <div  >
+      <label>My name : </label>
+      <input  #user name=" id1" size="30" type="text" required/>
+    </div>
+
+    <div  >
+      <label>User 1 : </label>
+      <input  #id1 name=" id1" size="30" type="text" />
+    </div>
+
+    <div  >
+      <label>User 2 : </label>
+      <input  #id2 name=" id2" size="30" type="text" />
+    </div>
+
+    <div  >
+      <label>User 3 : </label>
+      <input  #id3 name=" id3" size="30" type="text" />
+    </div>
+
+    <div  >
+      <label >User 4 : </label>
+      <input  #id4 name=" id4" size="30" type="text" />
+    </div>
+
+    <div >
+      <button (click)="addGroup()" >Submit</button>
+    </div>
+  </div>
+
+
+
+</ul>

@@ -12,19 +12,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/common/http");
 require("rxjs/Rx");
-var HeroService = (function () {
-    function HeroService(http) {
+var GroupService = (function () {
+    function GroupService(http) {
         this.http = http;
-        this.heroesUrl = 'http://localhost:8080/Heroes/Controller';
+        this.groupsUrl = 'http://localhost:8080/Groups/Controller';
     }
-    HeroService.prototype.getHeroes = function () {
-        return this.http.get(this.heroesUrl);
+    GroupService.prototype.getGroups = function () {
+        return this.http.get(this.groupsUrl);
     };
-    HeroService = __decorate([
+    GroupService = __decorate([
         core_1.Injectable(),
         __metadata("design:paramtypes", [http_1.HttpClient])
-    ], HeroService);
-    return HeroService;
+    ], GroupService);
+    return GroupService;
 }());
-exports.HeroService = HeroService;
 //# sourceMappingURL=hero.service.js.map

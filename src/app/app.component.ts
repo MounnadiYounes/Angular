@@ -4,12 +4,12 @@ import { Component } from '@angular/core';
     selector: 'app-lector',
     template: `<h1>{{title}}</h1>
     <nav>
-        <a routerLink="/heroes">Heroes</a>
+        <a routerLink="/groups">Groups</a>
     </nav>
     <router-outlet></router-outlet>
     `
 })
 
 export class AppComponent {
-    title = 'Heroes Example';
+    title = 'Groups Example';
 }

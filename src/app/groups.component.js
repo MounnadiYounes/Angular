@@ -10,33 +10,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var hero_service_1 = require("./hero.service");
+var group_service_1 = require("./group.service");
 var TimerObservable_1 = require("rxjs/observable/TimerObservable");
 require("rxjs/Rx");
-var HeroesComponent = (function () {
-    function HeroesComponent(heroService) {
-        this.heroService = heroService;
+var GroupsComponent = (function () {
+    function GroupsComponent(groupService) {
+        this.groupService = groupService;
     }
-    HeroesComponent.prototype.getHeroes = function () {
+    GroupsComponent.prototype.getGroups = function () {
         var _this = this;
         TimerObservable_1.TimerObservable.create(0, 2500)
             .subscribe(function () {
-            _this.heroService.getHeroes()
-                .subscribe(function (data) { return _this.heroes = data; });
+            _this.groupService.getGroups()
+                .subscribe(function (data) { return _this.groups = data; });
         });
     };
-    HeroesComponent.prototype.ngOnInit = function () {
-        this.getHeroes();
+    GroupsComponent.prototype.ngOnInit = function () {
+        this.getGroups();
     };
-    HeroesComponent = __decorate([
+    GroupsComponent = __decorate([
         core_1.Component({
-            selector: 'my-heroes',
-            templateUrl: './heroes.component.html',
-            styleUrls: ['./heroes.component.css']
+            selector: 'my-groups',
+            templateUrl: './groups.component.html',
+            styleUrls: ['./groups.component.css']
         }),
-        __metadata("design:paramtypes", [hero_service_1.HeroService])
-    ], HeroesComponent);
-    return HeroesComponent;
+        __metadata("design:paramtypes", [group_service_1.GroupService])
+    ], GroupsComponent);
+    return GroupsComponent;
 }());
-exports.HeroesComponent = HeroesComponent;
 //# sourceMappingURL=heroes.component.js.map
